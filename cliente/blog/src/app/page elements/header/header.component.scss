@@ -1,0 +1,26 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    .logo{
+        width: 10em;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navigate{
+        display: flex;
+        align-items: center;
+
+        ul{
+            display: flex;
+            gap: 1em;
+            list-style: none;
+
+            .login{
+                margin-right: 2em;
+            }
+        }
+    }
+}
