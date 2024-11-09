@@ -1,0 +1,38 @@
+<div class="createPostContainer">
+    <h3 class="create-post-title">Criar Novo Post</h3>
+    <div class="create-post-header">
+        <img src="assets/perfil.jpg" alt="Foto do Usuário" class="create-post-user-photo">
+        <div class="create-post-user-info">
+            <p class="create-post-user-name">Jubscrei Ribeiro</p>
+        </div>
+    </div>
+    <form class="create-post-form">
+        <div class="form-group">
+            <label for="post-title">Título</label>
+            <input type="text" id="post-title" class="form-input" placeholder="Digite o título do post">
+        </div>
+        <div class="form-group">
+            <label for="post-image">Imagem</label>
+            <input type="file" id="post-image" class="form-input">
+        </div>
+        <div class="form-group">
+            <label for="post-category">Categoria</label>
+            <select id="post-category" class="form-input">
+                <option value="mma">MMA</option>
+                <option value="muay-thai">Muay Thai</option>
+                <option value="boxing">Boxing</option>
+                <option value="jiu-jitsu">Jiu Jitsu</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="post-content">Conteúdo</label>
+            <textarea id="post-content" class="form-input" placeholder="Escreva o conteúdo do post..." rows="6"></textarea>
+        </div>
+        <div class="submitContainer">
+            <button type="submit" class="submit-button">Criar Post</button>
+        </div>
+    </form>
+</div>
+
+
