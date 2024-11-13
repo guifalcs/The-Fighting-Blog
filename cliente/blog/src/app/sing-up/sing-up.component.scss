@@ -1,4 +1,4 @@
-.login-container {
+.signup-container {
     width: 100%;
     max-width: 40em;
     padding: 1.25em;
@@ -7,7 +7,7 @@
     border-radius: 0.5em;
     box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
 
-    .login-title {
+    .signup-title {
         font-size: 1.5em;
         font-weight: bold;
         color: #333;
@@ -15,12 +15,12 @@
         margin-bottom: 1.25em;
     }
 
-    .login-form-container {
+    .signup-form-container {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .login-form {
+        .signup-form {
             display: flex;
             flex-direction: column;
             gap: 1em;
@@ -67,12 +67,12 @@
                 }
             }
 
-            .signup-redirect {
+            .login-redirect {
                 text-align: center;
                 font-size: 1em;
                 color: #333;
 
-                .signup-link {
+                .login-link {
                     color: #007bff;
                     text-decoration: none;
                     font-weight: bold;
