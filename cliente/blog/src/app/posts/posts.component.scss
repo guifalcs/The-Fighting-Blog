@@ -1,133 +1,184 @@
+/* Animação de entrada */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos gerais do container e animações */
 .postsContainer {
     display: flex;
     justify-content: space-around;
-
-    .profile {
-        width: 12.5em;
-        height: fit-content;
-        padding: 1.25em;
-        border: 0.063em solid #ccc;
-        text-align: center;
-        background-color: #f9f9f9;
-        box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
-
-        .profile-image {
-            width: 6.25em;
-            height: 6.25em;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 0.625em;
-            border: 0.188em solid white;
-        }
-
-        .profile-name {
-            font-size: 1.125em;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-        }
-    }
-
-    .posts {
-        width: 100%;
-        max-width: 37.5em;
-        padding: 1.25em;
-        background-color: #f1f1f1;
-        box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
-
-        .post {
-            padding: 0.938em;
-            margin-bottom: 1.25em;
-            background-color: #ffffff;
-            box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
-
-            .post-header {
-                display: flex;
-                align-items: center;
-                margin-bottom: 0.625em;
-
-                .post-user-photo {
-                    width: 2.5em;
-                    height: 2.5em;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    margin-right: 0.625em;
-                }
-
-                .post-user-info {
-                    display: flex;
-                    flex-direction: column;
-
-                    .post-user-name {
-                        font-size: 1em;
-                        font-weight: bold;
-                        margin: 0;
-                    }
-
-                    .post-category {
-                        font-size: 0.875em;
-                        color: #888;
-                        margin: 0;
-                    }
-                }
-            }
-
-            .post-title {
-                font-size: 1.25em;
-                margin: 0.625em 0;
-                font-weight: bold;
-            }
-
-            .post-content {
-                font-size: 1em;
-                line-height: 1.6;
-                color: #333;
-            }
-
-            .post-image {
-                width: 100%;
-                height: auto;
-                margin-top: 1em;
-                object-fit: cover;
-            }
-            
-        }
-    }
-
-    .categories {
-        width: 12.5em;
-        height: fit-content;
-        padding: 1.25em;
-        border: 0.063em solid #ccc;
-        background-color: #f9f9f9;
-        box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
-        text-align: center;
-    
-        .categories-title {
-            font-size: 1.25em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.625em;
-        }
-    
-        .categories-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-    
-            .category-item {
-                font-size: 1em;
-                color: #555;
-                padding: 0.5em 0;
-                cursor: pointer;
-                transition: color 0.3s;
-    
-                &:hover {
-                    color: #000;
-                    font-weight: bold;
-                }
-            }
-        }
-    }
-    
+    animation: slideIn 1s ease-out forwards;
+    opacity: 0;
 }
+
+.profile,
+.posts,
+.categories {
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+}
+
+.profile {
+    width: 12.5em;
+    height: fit-content;
+    padding: 1.25em;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    animation-delay: 0.2s;
+}
+
+.profile-image {
+    width: 6.25em;
+    height: 6.25em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.625em;
+    border: 0.188em solid white;
+}
+
+.profile-name {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.posts {
+    width: 100%;
+    max-width: 37.5em;
+    padding: 1.25em;
+    background-color: #f1f1f1;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    animation-delay: 0.4s;
+}
+
+.post {
+    padding: 0.938em;
+    margin-bottom: 1.25em;
+    background-color: #ffffff;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625em;
+}
+
+.post-user-photo {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.625em;
+}
+
+.post-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-user-name {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.post-category {
+    font-size: 0.875em;
+    color: #888;
+    margin: 0;
+}
+
+.post-title {
+    font-size: 1.25em;
+    margin: 0.625em 0;
+    font-weight: bold;
+}
+
+.post-content {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    object-fit: cover;
+}
+
+.categories {
+    width: 12.5em;
+    padding: 1.25em;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #f3f3f3, #f9f9f9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation-delay: 0.6s;
+}
+
+.categories-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.625em;
+    border-bottom: 2px solid #E01F28;
+    padding-bottom: 0.5em;
+}
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-item {
+    font-size: 1em;
+    color: #555;
+    padding: 0.75em 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.category-item::before {
+    content: '•';
+    font-size: 1.2em;
+    color: #E01F28;
+    transition: color 0.3s;
+}
+
+.category-item:hover {
+    background-color: #E01F28;
+    color: white;
+    font-weight: bold;
+}
+
+.category-item:hover::before {
+    color: white;
+}
+
+.category-item.selected {
+    background-color: #E01F28;
+    color: white;
+    font-weight: bold;
+}
+
+.category-item.selected::before {
+    color: white;
+}
+
