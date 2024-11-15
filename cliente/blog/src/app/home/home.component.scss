@@ -36,23 +36,42 @@
             gap: 1em;
             transition: 0.4s;
 
-            #discover{
+            #discover, #singup {
+                padding: 0.5em 2em;
+                font-size: 1.125em;
+                font-weight: bold;
+                color: #fff;
+                background-color: #007bff;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+                text-transform: uppercase;
+            }
+            
+            #discover {
                 background-color: #BEBBBB;
-
-                &:hover{
-                    background-color: #948e8e;
-                    cursor: pointer;
-                }
             }
-
-            #singup{
+            
+            #singup {
                 background-color: #E01F28;
-
-                &:hover{
-                    background-color: #a7131b;
-                    cursor: pointer;
-                }
             }
+
+            #discover:hover{
+                transform: translateY(-3px);
+                background-color: #948e8e;
+            }
+            
+            #singup:hover {
+                background-color: #a7131b;
+                transform: translateY(-3px);
+                box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+            }
+            
+            #discover:focus, #singup:focus {
+                outline: none;
+                box-shadow: 0 0 0 0.3em rgba(0, 123, 255, 0.5);
+            }
+            
         }
        
     }
