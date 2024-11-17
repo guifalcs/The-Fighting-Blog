@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.SERVER_PORT || 8081;
 const prisma = new PrismaClient();
+app.use(express.json());
 
 async function main(){
     await prisma.user.create({
