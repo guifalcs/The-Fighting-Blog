@@ -5,7 +5,7 @@ export default interface PostInterface{
     userId: string
 }
 
-enum categoryOptions{
+export enum categoryOptions{
     mma = 'mma',
     jiu_jitsu = 'jiu jitsu',
     muay_thai = 'muay thai',
