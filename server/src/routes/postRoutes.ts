@@ -1,4 +1,5 @@
 //Imports
+
 import PostController from "../controllers/postController";
 import express, { Request, Response } from "express";
 
