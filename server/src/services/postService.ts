@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import PostInterface from "../interfaces/postInterface";
 const prisma = new PrismaClient();
 
 export default class PostService {
@@ -8,4 +9,8 @@ export default class PostService {
         return posts;
     }
 
+    async addPost(postData: PostInterface){
+        const createdPost = await prisma.post.create({data: postData});
+        return createdPost
+    }
 } 
