@@ -9,7 +9,17 @@ datasource db {
 
 model User {
   id String @id @default(uuid())
-  name String @db.VarChar(100)
-  email String @unique @db.VarChar(80)
+  name String 
+  email String @unique 
   password String
+  posts Post[]
+}
+
+model Post {
+  id       String @id @default(uuid())
+  title    String
+  category String
+  content  String 
+  user     User @relation(fields: [id], references: [id])
+  userId   String
 }
