@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import userInterface from "../interfaces/userInterface";
 const prisma = new PrismaClient();
 
 export default class UserService {
@@ -13,4 +14,8 @@ export default class UserService {
         return user;
     }
 
+   async createUser(user: userInterface){
+        const createdUser = await prisma.user.create({data: user});
+        return createdUser;
+    }
 }

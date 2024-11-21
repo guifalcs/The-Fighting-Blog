@@ -17,3 +17,8 @@ userRoutes.get('/getUser', async (req: Request, res: Response) => {
     const user = await controller.getUser(email);
     res.json(user);
 });
+
+userRoutes.post('/createUser', async (req: Request, res: Response) => {
+    const user = await controller.createUser(req, res);
+    res.json(user);
+});
