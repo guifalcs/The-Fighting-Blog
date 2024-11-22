@@ -10,6 +10,19 @@ export default class PostController {
         return posts;
     }
 
+    async getPostsByUser(req: Request, res: Response){
+        const userId = req.body.id
+        const posts = postService.getPostsByUser(userId)
+        
+        try{
+            const posts = postService.getPostsByUser(userId)
+            return posts;
+        } catch(err){
+            res.status(400).json(err)
+        }
+
+    }
+
     async addPosts(req: Request, res: Response){
 
         if (!Object.values(categoryOptions).includes(req.body.category)) {

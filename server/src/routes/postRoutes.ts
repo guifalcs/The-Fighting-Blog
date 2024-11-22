@@ -14,6 +14,11 @@ postRoutes.get('/', async(req: Request, res: Response) => {
     res.json(posts)
 })
 
+postRoutes.get('/byUser', async(req: Request, res: Response) => {
+    const posts = await controller.getPostsByUser(req, res);
+    res.json(posts)
+})
+
 postRoutes.post('/', async(req: Request, res: Response) => {
     const post = await controller.addPosts(req, res);
     res.json(post)

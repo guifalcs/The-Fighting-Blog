@@ -9,13 +9,18 @@ export default class PostService {
         return posts;
     }
 
+    async getPostsByUser(id: string){
+        const posts = await prisma.post.findMany({where: {userId: id}})
+        return posts;
+    }
+
     async addPost(postData: PostInterface){
         const createdPost = await prisma.post.create({data: postData});
-        return createdPost
+        return createdPost;
     }
 
     async deletePost(id: string){
         const deletedPost = await prisma.post.delete({where: {id: id}});
-        return deletedPost
+        return deletedPost;
     }
 } 
