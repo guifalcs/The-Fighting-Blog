@@ -9,8 +9,8 @@ export default class UserService {
         return users;
     }
 
-    async getUser(email: string) {
-        const user = await prisma.user.findUnique({ where: { email } });
+    async getUser(id: string) {
+        const user = await prisma.user.findUnique({ where: { id } });
         return user;
     }
 
