@@ -15,14 +15,9 @@ const prisma = new PrismaClient();
 app.use(express.json());
 app.use('/api',router)
 
-//Função principal
-async function main(){
-    
-}
 
 //Inicialização do servidor
 app.listen(port, async() => {
     console.log(`Server is running on port ${port}`);
-    main()
 });
 
