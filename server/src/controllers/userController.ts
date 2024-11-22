@@ -7,33 +7,29 @@ const userService = new UserService()
 
 export default class UserController {
 
-    async getUsers() {
+    async getUsers(req: Request, res: Response) {
         const users = userService.getUsers()
-        return users
+        res.status(200).json(users)
     }
 
-    async getUser(email: string){
+    async getUser(req: Request, res: Response){
+        const email = req.body.email
         const user = userService.getUser(email)
-        return user
+        res.status(200).json(user)
     }
 
     async createUser(req: Request, res: Response) {
+
         const userObject: userInterface = {
             name: req.body.name, 
             email: req.body.email,
             password: req.body.password
+            
         }
         
-        try{
+        const user = userService.createUser(userObject)
+        res.status(201).json(user)
 
-            const user = userService.createUser(userObject)
-            return user;
-
-        }catch(e){
-
-            return e
-
-        }
     }
 
 }
