@@ -23,8 +23,24 @@ export default class PostController {
             userId: req.body.userId
         }
 
-        const post = postService.addPost(postObject)
-        return post;
+        try{
+            const post = await postService.addPost(postObject)
+            return post;
+        } catch(err){
+            res.status(400).json(err)
+        }
+        
+    }
+
+    async deletePost(req: Request, res: Response){
+        const postId = req.body.id;
+
+        try{
+            const post = await postService.deletePost(postId)
+            return post;
+        } catch(err){
+            res.status(400).json(err)
+        }
     }
 
 }

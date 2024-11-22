@@ -13,4 +13,9 @@ export default class PostService {
         const createdPost = await prisma.post.create({data: postData});
         return createdPost
     }
+
+    async deletePost(id: string){
+        const deletedPost = await prisma.post.delete({where: {id: id}});
+        return deletedPost
+    }
 } 
